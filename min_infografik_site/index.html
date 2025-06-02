@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockholm's Pulse: A Victor-Commissioned AI Guide for Merit, Max & Zsófi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #000000; /* Black background */
+            color: #F8F8F8; /* Off-white primary text */
+        }
+        /* Berlin Industrial Disco Vibe Palette:
+           BACKGROUND_PRIMARY: #000000 (Black)
+           TEXT_PRIMARY: #F8F8F8 (Off-white)
+           TEXT_SECONDARY: #A0A0A0 (Light Gray)
+           ACCENT_PINK: #FF1493 (DeepPink)
+           ACCENT_BLUE: #00BFFF (DeepSkyBlue)
+           ACCENT_GREEN: #32CD32 (LimeGreen)
+           ACCENT_YELLOW: #FFD700 (Gold)
+           ACCENT_PURPLE: #DA70D6 (Orchid)
+           CARD_BACKGROUND: #1A1A1A (Very Dark Gray for cards)
+        */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; 
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 450px;
+            }
+        }
+        .content-card { /* General card style for both sections */
+            background-color: #1A1A1A;
+            border: 1px solid #333333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #FF149360, 0 0 25px #00BFFF40; /* Neon glow effect */
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.9); /* Darker, more transparent black */
+            backdrop-filter: blur(10px);
+        }
+        .section-title {
+            font-family: 'Orbitron', sans-serif; /* More industrial/digital font for titles */
+            letter-spacing: 0.05em;
+        }
+        .main-section-link {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem; /* Slightly larger for main sections */
+        }
+        .subsection-link {
+            font-size: 0.9rem;
+        }
+        /* Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. */
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+
+    <nav class="sticky-nav shadow-lg py-3 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row flex-wrap justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm md:text-base">
+            <div>
+                <a href="#national-day" class="main-section-link text-[#32CD32] hover:text-[#FFD700] font-bold">NATIONAL DAY (JUNE 6)</a>
+            </div>
+            <div>
+                <a href="#nightlife" class="main-section-link text-[#DA70D6] hover:text-[#FFD700] font-bold">NIGHTLIFE PULSE</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header id="intro" class="text-center my-12 scroll-mt-20">
+            <h1 class="section-title text-4xl md:text-6xl font-black text-[#FF1493] mb-3 uppercase">Stockholm's Pulse</h1>
+            <p class="text-xl md:text-2xl text-[#00BFFF] mb-4">Hey Merit, Max & Zsófi! Victor here (via my AI research assistant!).</p>
+            <p class="max-w-3xl mx-auto text-gray-300 mb-2">
+                I had this AI dig up all the cool stuff we can do in Stockholm June 4-9. It's whipped up this interactive guide with a Berlin-esque industrial vibe, splashed with neon and pride colors, just for us.
+                Below, you'll find two main sections: one for conquering National Day (June 6th) and another for diving deep into the city's nightlife.
+            </p>
+            <p class="max-w-3xl mx-auto text-gray-400 text-sm">
+                (P.S. Since we're all crashing near Mariatorget in Södermalm, some tips might be extra handy!)
+            </p>
+        </header>
+
+        <main class="space-y-20">
+
+            <section id="national-day" class="scroll-mt-20">
+                <div class="bg-[#101010] rounded-xl shadow-2xl p-6 md:p-8 border-2 border-[#32CD32]">
+                    <h2 class="section-title text-4xl font-bold text-[#32CD32] text-center mb-10 uppercase">National Day Conquest: June 6th</h2>
+                    <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                        Alright team, June 6th is Sweden's National Day! It's generally a more "laid-back" patriotic vibe than some other countries – think family gatherings, flags, and folk music rather than massive fireworks. But there's still plenty for us to dive into, from royal ceremonies to local festivities. Since we're based at Mariatorget, Södermalm, getting around will be pretty smooth. Here are our top options:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <div class="content-card rounded-lg p-6 border-[#32CD32]">
+                            <h3 class="text-2xl font-semibold text-[#32CD32] mb-3 uppercase">A Day at Slussen (Local Gem!)</h3>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Location:</strong> Slussen (Super close to Mariatorget!)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Time:</strong> 11:00 AM – 8:00 PM</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Cost:</strong> Free</p>
+                            <p class="text-gray-300 my-3">
+                                This is the official opening of the new Södermalmstorg and Mälartrappan right near us. Expect music, food, and a chance to see the newly revamped area. The Slussen Project team will be there to talk about it all. Could be a cool local thing to check out, especially the mini music festival from 4 PM.
+                            </p>
+                            <p class="text-xs text-gray-500"><strong>Why for us?</strong> Hyper-local, free, music, and a chance to see a new part of Södermalm come alive.</p>
+                        </div>
+
+                        <div class="content-card rounded-lg p-6 border-[#FFD700]">
+                            <h3 class="text-2xl font-semibold text-[#FFD700] mb-3 uppercase">National Day Races at Gärdet</h3>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Location:</strong> Gärdet (Bit of a trip, but unique!)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Time:</strong> 11:30 AM - Late Afternoon (Main races/events 12 PM - 4:15 PM)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Cost:</strong> Free (download ticket for program/discounts)</p>
+                            <p class="text-gray-300 my-3">
+                                Victor was here last year – apparently, it's a vibe with champagne and horse racing. It's a big public celebration with horse races (thoroughbreds, ponies, monté), artist performances (Sven-Ingvars!), kids' activities, a hat parade, and food trucks. Bring a picnic!
+                            </p>
+                            <p class="text-xs text-gray-500"><strong>Why for us?</strong> Unique cultural experience, festive, free, and a chance to wear a fancy hat if you're feeling it. A bit different from the usual city stuff.</p>
+                        </div>
+
+                        <div class="content-card rounded-lg p-6 border-[#00BFFF]">
+                            <h3 class="text-2xl font-semibold text-[#00BFFF] mb-3 uppercase">Skansen Open-Air Museum</h3>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Location:</strong> Djurgården</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Time:</strong> 10:00 AM – 8:00 PM (Royal family arrives for evening concert ~6 PM)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Cost:</strong> ~285 SEK (confirm if free on Nat'l Day)</p>
+                            <p class="text-gray-300 my-3">
+                                The traditional heart of National Day celebrations. Expect a full day of Swedish culture: flag workshops, old-fashioned games, folk dance, music, and a market. The Royal Family makes an appearance for the evening concert. It's a deep dive into Swedish traditions.
+                            </p>
+                             <p class="text-xs text-gray-500"><strong>Why for us?</strong> Quintessential Swedish culture, royal spotting, lively atmosphere. Good for understanding the local traditions.</p>
+                        </div>
+
+                        <div class="content-card rounded-lg p-6 border-[#DA70D6]">
+                            <h3 class="text-2xl font-semibold text-[#DA70D6] mb-3 uppercase">Royal Palace & Ceremonies</h3>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Location:</strong> Gamla Stan (Old Town)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Time:</strong> 10:00 AM – 5:00 PM (Changing of the Guard ~12:20 PM, Royal cortege departs ~5:50 PM)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Cost:</strong> Discounted entry (Half price adults, U19 free)</p>
+                            <p class="text-gray-300 my-3">
+                                For a more formal and regal experience. Prince Carl Philip opens the gates. Military music, historical talks, and a chance to see the normally-closed Bernadotte Library. The Changing of the Guard and the Royal cortege heading to Skansen are big draws.
+                            </p>
+                            <p class="text-xs text-gray-500"><strong>Why for us?</strong> Royal pomp, history, and it's in the beautiful Old Town. Good photo ops!</p>
+                        </div>
+
+                        <div class="content-card rounded-lg p-6 border-[#FF1493] md:col-span-2">
+                            <h3 class="text-2xl font-semibold text-[#FF1493] mb-3 uppercase">Opera & Picnic in Hagaparken</h3>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Location:</strong> Hagaparken (North of city center)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Time:</strong> 11:00 AM – 4:00 PM (Main Royal/Opera program likely 2:00 PM – 3:15 PM)</p>
+                            <p class="text-sm text-gray-400 mb-1"><strong class="text-gray-200">Cost:</strong> Free</p>
+                            <p class="text-gray-300 my-3">
+                                A more relaxed, yet still royal, vibe. Free National Day concert with the Royal Swedish Opera. Crown Princess Victoria and Prince Daniel attend. Expect singing, dancing, music, and a lovely picnic atmosphere in a beautiful park.
+                            </p>
+                            <p class="text-xs text-gray-500"><strong>Why for us?</strong> Chilled vibes, high-quality free music, royal presence, and perfect for a group picnic if the weather's good.</p>
+                        </div>
+                    </div>
+                     <p class="text-center text-gray-400 mt-10">
+                        As evening approaches on National Day, the official stuff winds down, but the party often continues. Places like <strong class="text-[#FF1493]">Mosebacketerrassen</strong> (Södermalm, great views!) or <strong class="text-[#00BFFF]">Plåtparken Terrass</strong> (Liljeholmen, specific music genres) might be options if we're looking to keep the festive spirit going.
+                    </p>
+                </div>
+            </section>
+
+            <section id="nightlife" class="scroll-mt-20">
+                <div class="bg-[#1A1A1A] rounded-xl shadow-2xl p-6 md:p-8 border-2 border-[#DA70D6]">
+                    <header class="text-center mb-10">
+                        <h2 class="section-title text-4xl font-bold text-[#DA70D6] uppercase">Nightlife Pulse: After Dark Ops</h2>
+                        <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+                            Alright, Merit, Max, and Zsófi – Victor again! Now for the nocturnal part of our Stockholm adventure. This AI has scanned the depths for the kind of industrial, alternative, and vibrant spots we're after. Since we're Södermalm locals for the week (Mariatorget represent!), many of these will be right on our doorstep or an easy hop away.
+                        </p>
+                    </header>
+                    
+                    <div class="mb-10 border-b-2 border-[#DA70D6] pb-2 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <a href="#finding-events-night" class="subsection-link text-[#00BFFF] hover:text-[#FF1493] font-semibold">FIND</a>
+                        <a href="#event-highlights-night" class="subsection-link text-[#00BFFF] hover:text-[#FF1493] font-semibold">HIGHLIGHTS</a>
+                        <a href="#venue-spotlight-night" class="subsection-link text-[#00BFFF] hover:text-[#FF1493] font-semibold">VENUES</a>
+                        <a href="#genre-breakdown-night" class="subsection-link text-[#00BFFF] hover:text-[#FF1493] font-semibold">GENRES</a>
+                        <a href="#organizers-night" class="subsection-link text-[#00BFFF] hover:text-[#FF1493] font-semibold">ORGANIZERS</a>
+                    </div>
+
+                    <div id="finding-events-night" class="scroll-mt-40 mb-16">
+                        <h3 class="section-title text-3xl font-bold text-[#32CD32] text-center mb-8 uppercase">Navigating the Depths: Finding Your Frequency</h3>
+                        <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+                            Stockholm's truly underground scene whispers its secrets. Here's how to tune in, especially for last-minute gems:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                            <div class="bg-[#111111] p-6 rounded-lg shadow-md border border-[#FFD700]">
+                                <h4 class="text-xl font-semibold text-[#FFD700] mb-2 uppercase">Digital Compass 📱</h4>
+                                <p class="text-sm text-gray-300">
+                                    <strong class="text-[#FF1493]">Resident Advisor (RA.co):</strong> Primary source for listed techno/house.
+                                    <br><strong class="text-[#FF1493]">Instagram & Facebook:</strong> Follow key organizers (e.g., @techno_stockholm, FIST.nu). Private groups for deeper cuts.
+                                </p>
+                            </div>
+                            <div class="bg-[#111111] p-6 rounded-lg shadow-md border border-[#00BFFF]">
+                                <h4 class="text-xl font-semibold text-[#00BFFF] mb-2 uppercase">The Vibe 🎧</h4>
+                                <p class="text-sm text-gray-300">
+                                    Passion for music, respectful community, freedom. Queer/sex-positive spaces (FIST). Dress: Berlin black to disco glam. Be you.
+                                </p>
+                            </div>
+                            <div class="bg-[#111111] p-6 rounded-lg shadow-md border border-[#32CD32]">
+                                <h4 class="text-xl font-semibold text-[#32CD32] mb-2 uppercase">Safe Conduct 🛡️</h4>
+                                <p class="text-sm text-gray-300">
+                                    Stockholm's safe. Watch belongings. Respect the space & people. Many events are "safe spaces." Know your limits.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="event-highlights-night" class="scroll-mt-40 mb-16">
+                        <h3 class="section-title text-3xl font-bold text-[#DA70D6] text-center mb-10 uppercase">Event Matrix: June 4-9, 2025</h3>
+                        <div id="eventsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        </div>
+                    </div>
+                    
+                    <div id="venue-spotlight-night" class="scroll-mt-40 mb-16">
+                        <h3 class="section-title text-3xl font-bold text-[#00BFFF] text-center mb-8 uppercase">Venue Vortex: Where Beats Collide</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                            <div>
+                                <h4 class="text-2xl font-semibold text-[#FF1493] mb-3 uppercase">🏭 Industrial Sanctuaries</h4>
+                                <p class="text-gray-300 mb-4">
+                                    Stockholm's electronic heart often beats loudest in converted industrial landscapes.
+                                    <br><strong>Key Zones:</strong> Frihamnen (B-K) and Slakthusområdet (Kvarteret, Bar15, Fållan, Slakthuset). Many are a short metro ride from Mariatorget.
+                                </p>
+                                 <div class="chart-container">
+                                    <canvas id="industrialHubsChart"></canvas>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-2 text-center">Event Focus in Key Industrial Zones (June 4-9).</p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-semibold text-[#32CD32] mb-3 uppercase">🌳 Concrete Jungles & Beyond</h3>
+                                <p class="text-gray-300 mb-4">
+                                    True "forest raves" are spontaneous, but some events offer unique settings.
+                                    <br><strong>Example:</strong> TUSSILAGO Festival at Gazebo (Skogås) for a lush warehouse escape.
+                                    <br>Follow <strong class="text-[#FFD700]">Technohearts</strong> (@techno_stockholm) for "Open Air" events.
+                                </p>
+                                <div class="bg-[#111111] p-4 rounded-lg shadow-md mt-6 border border-[#DA70D6]">
+                                    <h5 class="font-semibold text-[#DA70D6] uppercase">Seeking Wild Raves?</h5>
+                                    <p class="text-sm text-gray-400">Genuine forest/illicit raves are last-minute via private channels. Look for "Open Air" or festivals later in summer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="genre-breakdown-night" class="scroll-mt-40 mb-16">
+                        <h3 class="section-title text-3xl font-bold text-[#FFD700] text-center mb-8 uppercase">The Sonic Spectrum</h3>
+                        <p class="text-center text-gray-400 mb-6 max-w-2xl mx-auto">
+                            Stockholm's underground delivers diverse electronic frequencies. Here's a taste for the week:
+                        </p>
+                        <div class="chart-container h-[350px] md:h-[450px] max-h-[500px]">
+                            <canvas id="genreDistributionChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 text-center">Approximate Music Style Presence at Featured Events (June 4-9).</p>
+                    </div>
+                    
+                    <div id="organizers-night" class="scroll-mt-40">
+                        <h3 class="section-title text-3xl font-bold text-[#FF1493] text-center mb-8 uppercase">Scene Architects: Key Organizers</h3>
+                        <p class="text-center text-gray-400 mb-6 max-w-2xl mx-auto">
+                            These crews are the lifeblood of Stockholm's alternative scene. Follow their signals:
+                        </p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#00BFFF]"><strong class="text-[#00BFFF]">Department</strong><p class="text-xs text-gray-400">Festivals, Intl Headliners</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#FF1493]"><strong class="text-[#FF1493]">FIST</strong><p class="text-xs text-gray-400">Queer Focus, Unique Venues</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#32CD32]"><strong class="text-[#32CD32]">Technohearts</strong><p class="text-xs text-gray-400">Hard Techno, Open Airs</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#DA70D6]"><strong class="text-[#DA70D6]">NATTÖGA</strong><p class="text-xs text-gray-400">Immersive, Organic, Gazebo</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#FFD700]"><strong class="text-[#FFD700]">Biologic</strong><p class="text-xs text-gray-400">Themed Parties (BISOU)</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#00BFFF]"><strong class="text-[#00BFFF]">Roots by OLING</strong><p class="text-xs text-gray-400">Daytime House, Rooftops</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#FF1493]"><strong class="text-[#FF1493]">Placebo Underground</strong><p class="text-xs text-gray-400">Music, Art & Atmosphere</p></div>
+                            <div class="p-3 bg-[#111111] rounded-lg shadow-md border border-[#32CD32]"><strong class="text-[#32CD32]">Studio Sven</strong><p class="text-xs text-gray-400">Event Promotion</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="final-thoughts" class="text-center my-16">
+                 <h2 class="section-title text-3xl font-bold text-[#00BFFF] mb-6 uppercase">Activate the Night (and Day)!</h2>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-4">
+                    So, Merit, Max, & Zsófi, that's the lowdown from your friendly neighborhood AI (commissioned by Victor, of course!). Stockholm's got a lot to offer, from regal National Day vibes to deep underground beats.
+                    Use this as your launchpad, check RA for last-minute updates, and let's make this Stockholm trip legendary!
+                </p>
+                <p class="max-w-3xl mx-auto text-[#FFD700] font-semibold text-lg">
+                    The pulse awaits. Let's go! /Victor
+                </p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-800">
+            <p class="text-sm text-gray-500">
+                AI-synthesized data from "Stockholms Underjordiska Puls" & "Nationaldagsfirande och Stockholmsupplevelser" reports.
+                <br>Infographic created for Merit, Max, Zsófi & Victor. Event details subject to change; always verify.
+                <br>This document was generated programmatically. NEITHER Mermaid JS NOR SVG were used.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const eventsData = [
+            {
+                date: "Wed, June 4",
+                name: "Legacy Linx w. Daily Paper (NL)",
+                organizer: "Unknown",
+                venue: "Postkontoret",
+                djs: "Jarreau Vandal, Mansa",
+                style: "R&B, Hip-Hop, Soul, Eclectic Electronic",
+                time: "TBA",
+                tickets: "TBA",
+                vibe: "Likely relaxed, soulful start to the week in a smaller venue."
+            },
+            {
+                date: "Thu, June 5",
+                name: "Rampa vs &ME (Keinemusik)",
+                organizer: "Department (likely)",
+                venue: "Frihamnen / B-K",
+                djs: "&ME, Rampa",
+                style: "Deep House, Afro House, Tech House",
+                time: "5 PM - 1 AM",
+                tickets: "Tickets available, 18+",
+                vibe: "High-profile international DJs in a large industrial venue. High energy."
+            },
+            {
+                date: "Thu, June 5",
+                name: "BISOU: PARAMIDA, BASHKKA",
+                organizer: "Biologic",
+                venue: "Bar15 (DISTRIKTFEM)",
+                djs: "Abstraxion, BASHKKA, PARAMIDA, Sean Fender",
+                style: "House, Techno",
+                time: "9 PM - 3 AM",
+                tickets: "15 (SEK?), registration required",
+                vibe: "Mediterranean spirit, drag, dance, extravagant attire encouraged. Underground/alternative."
+            },
+            {
+                date: "Thu, June 5",
+                name: "FIST x Popoff Kitchen",
+                organizer: "FIST, Popoff Kitchen",
+                venue: "Kvarteret (Slakthusområdet)",
+                djs: "dj g2g, 131bpm, DJ Lip, Kirill Shapovalov, Dgeral, Sparkly Pony",
+                style: "Electronic (varied), Queer Club Sounds",
+                time: "9 PM - 3 AM",
+                tickets: "150 (SEK?), 20+, via FIST.nu",
+                vibe: "Queer-focused, 'f(l)ag day', two dance floors, energetic, inclusive, underground feel."
+            },
+            {
+                date: "Thu, June 5",
+                name: "Primal Scream (Live)",
+                organizer: "Luger",
+                venue: "Fållan (Slakthusområdet)",
+                djs: "Primal Scream",
+                style: "Alternative Rock/Electronic",
+                time: "Doors 6:30 PM",
+                tickets: "Tickets available, 18+",
+                vibe: "Legendary band with rave culture ties, at an industrial-chic venue."
+            },
+            {
+                date: "Fri, June 6",
+                name: "Department Festival 2025",
+                organizer: "Department",
+                venue: "Frihamnen / B-K",
+                djs: "Charlotte de Witte, Richie Hawtin, Cari Lekebusch, Miia Magia, Bella Boo, +many more (3 stages)",
+                style: "Techno, House",
+                time: "4 PM - 3 AM",
+                tickets: "645 SEK, 18+",
+                vibe: "'Raviest edition yet'. Major international & local lineup in a massive industrial port setting. Flagship techno event."
+            },
+            {
+                date: "Fri, June 6 - Sat, June 7",
+                name: "TUSSILAGO - THE FESTIVAL",
+                organizer: "NATTÖGA",
+                venue: "Gazebo (Skogås)",
+                djs: "Gidge, Franca, Hraach, Nassim Mehran, Hedda Stenberg, Britta Arnold, Mira, +more",
+                style: "Tech House, Electronica, Deep/Organic Electronic",
+                time: "Multi-day",
+                tickets: "1150 SEK, 21+",
+                vibe: "Two-day intimate festival with a nature-inspired, lush decorated warehouse vibe. Workshops, holistic elements. Outside central Stockholm."
+            },
+            {
+                date: "Fri, June 6",
+                name: "OLING presents Roots Open Air",
+                organizer: "Roots by OLING",
+                venue: "Blique by Nobis Rooftop",
+                djs: "OLING",
+                style: "House (melodic)",
+                time: "1 PM - 6 PM",
+                tickets: "200 SEK",
+                vibe: "Daytime, open-air rooftop party with panoramic Stockholm views. Sophisticated, relaxed atmosphere."
+            },
+            {
+                date: "Fri, June 6",
+                name: "MFÖ vol6",
+                organizer: "Unknown",
+                venue: "Guldfabriken",
+                djs: "Dj Samir, Parallax Deep, mc friman, marble & bob g",
+                style: "Phonk, Swedish House, House, Brazilian Phonk",
+                time: "From 12 PM (daytime)",
+                tickets: "TBA",
+                vibe: "Daytime event with a broad, bass-heavy electronic palette, likely a strong local underground feel."
+            },
+            {
+                date: "Sat, June 7",
+                name: "Fantastic Boys - Pingstafton",
+                organizer: "Fantastic Boys",
+                venue: "Morfar Ginko",
+                djs: "Fantastic Boys",
+                style: "House, Italo-Disco, Warm Grooves",
+                time: "TBA",
+                tickets: "TBA",
+                vibe: "Pentecost Eve special. Groovy, potentially retro-themed vibes in a smaller, central venue."
+            },
+            {
+                date: "Sat, June 7",
+                name: "Entrance x Slaktistaket: Jace Headland",
+                organizer: "Entrance Events",
+                venue: "Slakthuset (Slakthusområdet)",
+                djs: "Jace Headland, Daniel Skyver, Johan Vilborg, Hodel",
+                style: "Trance (Uplifting, Melodic, Progressive/Deep, Tech)",
+                time: "From 4 PM",
+                tickets: "TBA",
+                vibe: "Open-air day-to-night event focusing purely on trance music, within an industrial complex."
+            },
+            {
+                date: "Sat, June 7",
+                name: "Moment22",
+                organizer: "Fållan",
+                venue: "Lilla Fållan (Slakthusområdet)",
+                djs: "TBA",
+                style: "Electronic (TBA)",
+                time: "10 PM - 3 AM",
+                tickets: "Tickets available, 21+",
+                vibe: "Late-night clubbing experience at a smaller, more intimate stage within the Fållan complex."
+            },
+            {
+                date: "Sun, June 8 - Mon, June 9",
+                name: "AFIA Festival vol.8 2025",
+                organizer: "AFIA Festival",
+                venue: "Södermalm (Venue TBA)",
+                djs: "Thandi Draai, Jolie",
+                style: "Likely Afro House, Deep House, Soulful House",
+                time: "Multi-day",
+                tickets: "TBA",
+                vibe: "Closing out the weekend, part of a multi-day festival in trendy Södermalm, likely with a soulful, deep vibe."
+            }
+        ];
+
+        const eventsContainer = document.getElementById('eventsContainer');
+        if (eventsContainer) {
+            eventsData.forEach(event => {
+                const card = `
+                    <div class="bg-[#1A1A1A] rounded-xl shadow-2xl p-5 event-card flex flex-col justify-between border border-[#333333] hover:border-[#FF1493]">
+                        <div>
+                            <p class="text-sm font-semibold text-[#FF1493]">${event.date}</p>
+                            <h3 class="text-xl font-bold text-[#F8F8F8] mt-1 mb-2">${event.name}</h3>
+                            <p class="text-xs text-gray-400 mb-1"><strong class="text-gray-200">Venue:</strong> ${event.venue}</p>
+                            <p class="text-xs text-gray-400 mb-1"><strong class="text-gray-200">Style:</strong> ${event.style}</p>
+                            <p class="text-xs text-gray-400 mb-1"><strong class="text-gray-200">DJs:</strong> ${event.djs.length > 55 ? event.djs.substring(0, 52) + '...' : event.djs}</p>
+                            <p class="text-xs text-gray-400 mb-3"><strong class="text-gray-200">Time:</strong> ${event.time} | <strong class="text-gray-200">Tickets:</strong> ${event.tickets}</p>
+                            <p class="text-sm text-gray-300 leading-relaxed">${event.vibe}</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-xs inline-block bg-[#00BFFF] text-black px-2 py-1 rounded-full font-semibold">${event.organizer !== 'Unknown' ? event.organizer : 'Emerging Details'}</span>
+                        </div>
+                    </div>
+                `;
+                eventsContainer.innerHTML += card;
+            });
+        }
+
+
+        const processLabel = (label, maxLength = 16) => {
+            if (typeof label !== 'string') return ['Label Error'];
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines.length > 0 ? lines : [label];
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        const berlinPalette = {
+            primaryText: '#F8F8F8',
+            secondaryText: '#A0A0A0',
+            gridLines: '#444444',
+            accentPink: '#FF1493',
+            accentBlue: '#00BFFF',
+            accentGreen: '#32CD32',
+            accentYellow: '#FFD700',
+            accentPurple: '#DA70D6',
+            accentOrange: '#FF8C00' 
+        };
+
+        const defaultChartPlugins = {
+            legend: { 
+                position: 'bottom',
+                labels: { 
+                    font: { family: 'Inter', size: 10 },
+                    color: berlinPalette.secondaryText,
+                    boxWidth: 20,
+                    padding: 15
+                } 
+            },
+            tooltip: {
+                backgroundColor: 'rgba(0,0,0,0.8)',
+                titleColor: berlinPalette.accentYellow,
+                bodyColor: berlinPalette.primaryText,
+                callbacks: { title: tooltipTitleCallback },
+                bodyFont: { family: 'Inter' },
+                titleFont: { family: 'Inter', weight: 'bold' }
+            }
+        };
+        
+        const chartColorsVibrant = [berlinPalette.accentPink, berlinPalette.accentBlue, berlinPalette.accentGreen, berlinPalette.accentYellow, berlinPalette.accentPurple, berlinPalette.accentOrange];
+
+        const industrialHubsChartCtx = document.getElementById('industrialHubsChart');
+        if (industrialHubsChartCtx) {
+            new Chart(industrialHubsChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: [processLabel('Frihamnen / B-K'), processLabel('Slakthusområdet Area')],
+                    datasets: [{
+                        label: 'Key Events (June 4-9)',
+                        data: [2, 6], 
+                        backgroundColor: [berlinPalette.accentPink, berlinPalette.accentBlue],
+                        borderRadius: 4,
+                        barPercentage: 0.6,
+                        borderColor: berlinPalette.secondaryText,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                    scales: { 
+                        x: { 
+                            beginAtZero: true, 
+                            ticks: { stepSize: 1, color: berlinPalette.secondaryText },
+                            grid: { color: berlinPalette.gridLines }
+                        },
+                        y: {
+                            ticks: { color: berlinPalette.primaryText, font: {size: 10} },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: { ...defaultChartPlugins, legend: { display: false } }
+                }
+            });
+        }
+
+        const genreDistributionChartCtx = document.getElementById('genreDistributionChart');
+        if (genreDistributionChartCtx) {
+            new Chart(genreDistributionChartCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [processLabel('Techno / Tech House'), processLabel('House (Varied)'), processLabel('Electronic / Queer Club'), processLabel('Trance'), processLabel('Other (Rock/Phonk/Soul)')],
+                    datasets: [{
+                        label: 'Music Style Focus',
+                        data: [8, 7, 4, 1, 2], 
+                        backgroundColor: chartColorsVibrant,
+                        borderColor: '#000000',
+                        borderWidth: 3,
+                        hoverOffset: 8
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: defaultChartPlugins
+                }
+            });
+        }
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
